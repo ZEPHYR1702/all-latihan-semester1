@@ -29,13 +29,13 @@ namespace all_latihan
                         L2A();
                         break;
                     case 3:
-                        //L3A();
+                        L3A();
                         break;
                     case 4:
-                        //L4A();
+                        L4A();
                         break;
                     case 5:
-                        //L5A();
+                        L5A();
                         break;
                     default:
                         Console.WriteLine("Latihan tidak tersedia.");
@@ -98,6 +98,9 @@ namespace all_latihan
 
         public static void L3A()
         {
+            Console.WriteLine("Latihan 3 Week 3A");
+            Console.WriteLine();
+
             int hargabuku, jumlahBuku;
             double pajak, total, totalPembelian;
             Console.Write("Input harga per buku: ");
@@ -117,6 +120,58 @@ namespace all_latihan
             Console.WriteLine($"Total penjualan: {totalPembelian}");
             Console.WriteLine($"Pajak: {pajak}");
             Console.WriteLine($"Total pembelian: {total}");
+        }
+
+        public static void L4A()
+        {
+            Console.WriteLine("Latihan 4 Week 3A");
+            Console.WriteLine();
+
+            int currentPoin, startDate, currentDate, poin = 50, getItem, tidakLogin;
+            Console.Write("Input Player Name: ");
+            string playerName = Console.ReadLine();
+            Console.Write("Input Current Poins: ");
+            currentPoin = int.Parse(Console.ReadLine());
+            Console.Write("Input Start Date: ");
+            startDate = int.Parse(Console.ReadLine());
+            Console.Write("Input Current Date: ");
+            currentDate = int.Parse(Console.ReadLine());
+            tidakLogin = currentDate - startDate;
+            if (tidakLogin >= 3)
+            {
+                getItem = currentPoin / poin;
+                Console.WriteLine($"Hello, {playerName}. You get {getItem} new costumes.");
+            }
+            else
+            {
+                Console.WriteLine($"Hello, {playerName}. You have joined us for only {tidakLogin}. Unfortunately, a newbie player can’t buy new costumes");
+            } 
+        }
+
+        public static void L5A()
+        {
+            Console.WriteLine("Latihan 5 Week 3A");
+            Console.WriteLine();
+
+            double gajiPokok, penjualanTahunIni, penjualanTahunLalu, peningkatan, bonus;
+            Console.Write("Input penjualan tahun lalu: ");
+            penjualanTahunLalu = double.Parse(Console.ReadLine());
+            Console.Write("Input penjualan tahun ini: ");
+            penjualanTahunIni = double.Parse(Console.ReadLine());
+            Console.Write("Input gaji pokok: ");
+            gajiPokok = double.Parse(Console.ReadLine());
+            peningkatan = penjualanTahunIni - penjualanTahunLalu;
+            if (penjualanTahunIni > penjualanTahunLalu)
+            {
+                bonus = (peningkatan + gajiPokok) * 0.05;
+            }
+            else
+            {
+                bonus = 0;
+                peningkatan = 0;
+            }
+            Console.WriteLine($"Peningkatan = {peningkatan}");
+            Console.WriteLine($"Bonus yang didapatkan: {bonus}");
         }
     }
 }
