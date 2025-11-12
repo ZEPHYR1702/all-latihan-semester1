@@ -10,7 +10,7 @@ namespace all_latihan
     {
         public static void pilihan()
         {
-            Console.WriteLine("Ini adalah latihan minggu ke-4.");
+            Console.WriteLine("Latihan Week 4");
         }
     }
 }

@@ -20,19 +20,19 @@ namespace all_latihan
                     week1.pilihan();
                     break;
                 case 2:
-                    //week2.pilihan();
+                    week2.pilihan();
                     break;
                 case 3:
-                    //week3.pilihan();
+                    week3.pilihan();
                     break;
                 case 4:
-                    //week4.pilihan();
+                    week4.pilihan();
                     break;
                 case 5:
-                    //week5.pilihan();
+                    week5.pilihan();
                     break;
                 case 6:
-                    //week6.pilihan();
+                    week6.pilihan();
                     break;
                 case 7:
                     week7.pilihan();
