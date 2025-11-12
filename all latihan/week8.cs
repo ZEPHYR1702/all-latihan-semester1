@@ -6,7 +6,7 @@ public class week8
 	{
 		int pilihan;
 		Console.WriteLine("Latihan Week 8");
-        Console.Write("Latihan Berapa: ");
+        Console.Write("Latihan Berapa(1-7): ");
 		pilihan = int.Parse(Console.ReadLine());
 		switch (pilihan)
 		{

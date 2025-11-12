@@ -41,7 +41,7 @@ namespace all_latihan
                     week8.pilihan();
                     break;
                 case 9:
-                    //week9.pilihan();
+                    week9.pilihan();
                     break;
                 case 10:
                     //week10.pilihan();
