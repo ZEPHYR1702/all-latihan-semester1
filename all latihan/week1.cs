@@ -10,7 +10,7 @@ namespace all_latihan
     {
         public static void pilihan()
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Di week 1 tidak ada latihan program, hanya algoritma dan flowchart!");
         }
     }
 }
