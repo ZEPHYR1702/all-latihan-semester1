@@ -11,7 +11,7 @@ namespace all_latihan
         public static void pilihan()
         {
             Console.WriteLine("Latihan Week 3");
-            Console.Write("Week A/B: ");
+            Console.Write("Week 3 A/B: ");
             string week = Console.ReadLine().ToLower();
             if (week == "a")
             {
@@ -45,6 +45,35 @@ namespace all_latihan
             else if (week == "b")
             {
                 Console.WriteLine("Latihan Week 3B");
+                Console.WriteLine();
+
+                Console.Write("Pilih latihan (1-6)");
+                int latihan = int.Parse(Console.ReadLine());
+
+                switch (latihan)
+                {
+                    case 1:
+                        L1B();
+                        break;
+                    case 2:
+                        L2B();
+                        break;
+                    case 3:
+                        L3B();
+                        break;
+                    case 4:
+                        L4B();
+                        break;
+                    case 5:
+                        L5B();
+                        break;
+                    case 6:
+                        L6B();
+                        break;
+                    default:
+                        Console.WriteLine("Pilihan tidak valid");
+                        break;
+                }
             }
             else
             {
@@ -172,6 +201,256 @@ namespace all_latihan
             }
             Console.WriteLine($"Peningkatan = {peningkatan}");
             Console.WriteLine($"Bonus yang didapatkan: {bonus}");
+        }
+
+        public static void L1B()
+        {
+            Console.WriteLine("Latihan 1 Week 3B");
+            Console.WriteLine();
+            
+            int inputLezat, inputIrit, totalAwal;
+            double diskon, totalAkhir;
+            Console.Write("Masukan jumlah pembelian paket irit: ");
+            inputIrit = int.Parse(Console.ReadLine());
+            Console.Write("Masukan jumlah pembelian paket lezat: ");
+            inputLezat = int.Parse(Console.ReadLine());
+            totalAwal = (inputIrit * 22500) + (inputLezat * 35000);
+            if (inputIrit >= 3 || inputLezat >= 4)
+            {
+                diskon = totalAwal * 0.03;
+            }
+            else
+            {
+                diskon = 0;
+            }
+            totalAkhir = totalAwal - diskon;
+            Console.WriteLine("Total yang harus dibayar adalah: " + totalAkhir);
+        }
+
+        public static void L2B()
+        {
+            Console.WriteLine("Latihan 2 Week 3B");
+            Console.WriteLine();
+            
+            string jenisKelamin;
+            int tanggal, totalMakanan, totalMinuman, totalBeli;
+            double diskon, totalBayar;
+            Console.Write("Masukan jenis kelamin anda (L/P): ");
+            jenisKelamin = Console.ReadLine();
+
+            Console.Write("Masukan tanggal hari ini (1-31): ");
+            tanggal = int.Parse(Console.ReadLine());
+
+            Console.Write("Masukan total makanan yang anda pesan: ");
+            totalMakanan = int.Parse(Console.ReadLine());
+
+            Console.Write("Masukan total minuman yang anda pesan: ");
+            totalMinuman = int.Parse(Console.ReadLine());
+
+            totalBeli = totalMakanan + totalMinuman;
+
+            if ((jenisKelamin == "P" && tanggal == 22) && totalBeli > 250000)
+            {
+                diskon = 0.40 * totalMakanan;
+            }
+            else if ((jenisKelamin == "P" && tanggal == 22) && totalBeli <= 250000)
+            {
+                diskon = 0.1 * totalMakanan;
+            }
+            else
+            {
+                diskon = 0;
+            }
+            totalBayar = totalBeli - diskon;
+            Console.WriteLine("Diskon anda sebesar: " + diskon);
+            Console.WriteLine("Total yang harus dibayar: " + totalBayar);
+        }
+
+        public static void L3B()
+        {
+            Console.WriteLine("Latihan 3 Week 3B");
+            Console.WriteLine();
+
+            string kota;
+            int jumlahBuku, hargaBuku, totalBuku, total = 0, ongkir = 0;
+
+            Console.Write("Masukan jumlah buku yang dibeli : ");
+            jumlahBuku = int.Parse(Console.ReadLine());
+            Console.Write("Masukan harga buku : ");
+            hargaBuku = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Masukan kota tujuan:");
+            Console.WriteLine("1. Jakarta");
+            Console.WriteLine("2. Bandung");
+            Console.WriteLine("3. Surabaya");
+            Console.Write("input: ");
+            kota = Console.ReadLine();
+
+            totalBuku = jumlahBuku * hargaBuku;
+
+            if (kota == "Jakarta" || kota == "1")
+            {
+                ongkir = 19000;
+            }
+            else if (kota == "Bandung" || kota == "2")
+            {
+                ongkir = 11000;
+            }
+            else if (kota == "Surabaya" || kota == "3")
+            {
+                ongkir = 5000;
+            }
+            else
+            {
+                Console.WriteLine("Kota tidak tersedia");
+            }
+
+            if (total > 100000)
+            {
+                ongkir = 0;
+            }
+            total = totalBuku + ongkir;
+            Console.WriteLine("Ongkir : " + ongkir);
+            Console.WriteLine("Total harga buku : " + total);
+        }
+
+        public static void L4B()
+        {
+            Console.WriteLine("Latihan 4 Week 3B");
+            Console.WriteLine();
+
+            int nilai;
+            Console.Write("Masukkan Nilai Anda : ");
+            nilai = int.Parse(Console.ReadLine());
+            if (nilai >= 81 && nilai <= 100)
+            {
+                Console.WriteLine("Nisbi Anda: A");
+            }
+            else if (nilai >= 73 && nilai < 81)
+            {
+                Console.WriteLine("Nisbi Anda: AB");
+            }
+            else if (nilai >= 66 && nilai < 73)
+            {
+                Console.WriteLine("Nisbi Anda: B");
+            }
+            else if (nilai >= 60 && nilai < 66)
+            {
+                Console.WriteLine("Nisbi Anda: BC");
+            }
+            else if (nilai >= 55 && nilai < 60)
+            {
+                Console.WriteLine("Nisbi Anda: C");
+            }
+            else if (nilai >= 40 && nilai < 55)
+            {
+                Console.WriteLine("Nisbi Anda: D");
+            }
+            else
+            {
+                Console.WriteLine("Nisbi Anda: E");
+            }
+
+            if (nilai >= 55)
+            {
+                Console.WriteLine("Selamat Anda Lulus");
+            }
+            else
+            {
+                Console.WriteLine("Maaf Anda Tidak Lulus");
+            }
+        }
+
+        public static void L5B()
+        {
+            Console.WriteLine("Latihan 5 Week 3B");
+            Console.WriteLine();
+
+            Console.Write("Input nama mahasiswa: ");
+            string nama = Console.ReadLine();
+            Console.Write("Input IPK mahasiswa: ");
+            double ipk = double.Parse(Console.ReadLine());
+            Console.Write("Input masa studi (semester): ");
+            int masaStudi = int.Parse(Console.ReadLine());
+            Console.Write("Pernah BSS/MSS (y/n): ");
+            string pernahBSS = Console.ReadLine();
+            if ((ipk >= 3.9 && ipk <= 4) && (masaStudi >= 1 && masaStudi <= 8) && pernahBSS.ToLower() == "n")
+            {
+                Console.WriteLine("Nama: " + nama);
+                Console.WriteLine("IPK: " + ipk);
+                Console.WriteLine("Masa Studi: " + masaStudi + " semester");
+                Console.WriteLine("Status kelulusan: Summa Cumlaude");
+            }
+            else if ((ipk >= 3.5 && ipk < 3.9) && (masaStudi >= 1 && masaStudi <= 8) && pernahBSS.ToLower() == "n")
+            {
+                Console.WriteLine("Nama: " + nama);
+                Console.WriteLine("IPK: " + ipk);
+                Console.WriteLine("Masa Studi: " + masaStudi + " semester");
+                Console.WriteLine("Status kelulusan: Cumlaude");
+            }
+            else if ((ipk >= 2.0 && ipk < 3.5) || (masaStudi >= 1 && masaStudi <= 14))
+            {
+                Console.WriteLine("Nama: " + nama);
+                Console.WriteLine("IPK: " + ipk);
+                Console.WriteLine("Masa Studi: " + masaStudi + " semester");
+                Console.WriteLine("Status kelulusan: Regular");
+            }
+            else
+            {
+                Console.Write("input tidak valid");
+            }
+        }
+
+        public static void L6B()
+        {
+            Console.WriteLine("Latihan 6 Week 3B");
+            Console.WriteLine();
+
+            int standar = 300_000, superior = 500_000, deluxe = 1_000_000, lamaNginap;
+            double total = 0, diskon = 0.0;
+            string nama, jenisKamar, member;
+            Console.Write("Masukkan Nama Tamu: ");
+            nama = Console.ReadLine();
+
+            Console.WriteLine("Masukkan Jenis Kamar");
+            Console.WriteLine("1. Standar");
+            Console.WriteLine("2. Superior");
+            Console.WriteLine("3. Deluxe");
+            Console.Write("Pilihan Anda: ");
+
+            jenisKamar = Console.ReadLine();
+            Console.Write("Masukkan Lama Menginap: ");
+            lamaNginap = int.Parse(Console.ReadLine());
+
+            Console.Write("Apakah Anda Member (Y/N): ");
+            member = Console.ReadLine();
+
+            if (jenisKamar == "1" || jenisKamar.ToLower() == "standar")
+            {
+                total = standar * lamaNginap;
+            }
+            else if (jenisKamar == "2" || jenisKamar.ToLower() == "superior")
+            {
+                total = superior * lamaNginap;
+            }
+            else if (jenisKamar == "3" || jenisKamar.ToLower() == "deluxe")
+            {
+                total = deluxe * lamaNginap;
+            }
+            else
+            {
+                Console.WriteLine("Pilihan Anda Tidak Tersedia");
+            }
+            if (member.ToLower() == "y")
+            {
+                diskon = 0.1 * total;
+                total = total - diskon;
+            }
+            Console.WriteLine("Nama: " + nama);
+            Console.WriteLine("Jenis Kamar: " + jenisKamar);
+            Console.WriteLine("Lama Menginap: " + lamaNginap + " Hari");
+            Console.WriteLine("Diskon: Rp " + diskon);
+            Console.WriteLine("Total Bayar: Rp " + total);
         }
     }
 }
