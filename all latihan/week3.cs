@@ -10,7 +10,9 @@ namespace all_latihan
     {
         public static void pilihan()
         {
-            Console.WriteLine("Latihan Week 3");
+            Console.WriteLine("=================================");
+            Console.WriteLine("\tLatihan Week 3");
+            Console.WriteLine("=================================\n");
             Console.Write("Week 3 A/B: ");
             string week = Console.ReadLine().ToLower();
             if (week == "a")

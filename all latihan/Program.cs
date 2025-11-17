@@ -12,6 +12,7 @@ namespace all_latihan
         
         static void Main(string[] args)
         {
+            Console.WriteLine("=====(ALL LATIHAN ALPRO)=====\n");
             Console.Write("Week Berapa(1-14): ");
             int week = int.Parse(Console.ReadLine());
             switch (week)
@@ -44,7 +45,7 @@ namespace all_latihan
                     week9.pilihan();
                     break;
                 case 10:
-                    //week10.pilihan();
+                    week10.pilihan();
                     break;
                 case 11:
                     //week11.pilihan();
