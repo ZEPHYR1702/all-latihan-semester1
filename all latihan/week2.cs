@@ -10,9 +10,10 @@ namespace all_latihan
     {
         public static void pilihan()
         {
-            Console.WriteLine("=================================");
-            Console.WriteLine("\tLatihan Week 2");
-            Console.WriteLine("=================================\n");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan Week 2 =====");
+            Console.ResetColor();
+
             Console.Write("Pilih latihan Week 2A/B: ");
             string pilihan = Console.ReadLine().ToLower();
             if (pilihan == "a")
@@ -81,8 +82,9 @@ namespace all_latihan
 
         public static void L1A()
         {
-            Console.WriteLine("Latihan 1 Week 2A");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 1 Week 2A =====");
+            Console.ResetColor();
 
             Console.Write("Masukan jumlah buku: ");
             int jumlahBuku = int.Parse(Console.ReadLine());
@@ -94,8 +96,9 @@ namespace all_latihan
 
         public static void L2A()
         {
-            Console.WriteLine("Latihan 2 Week 2A");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 2 Week 2A =====");
+            Console.ResetColor();
 
             Console.Write("Masukan jumlah buku: ");
             int jumlahBuku = int.Parse(Console.ReadLine());
@@ -109,8 +112,9 @@ namespace all_latihan
 
         public static void L3A()
         {
-            Console.WriteLine("Latihan 3 Week 2A");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 3 Week 2A =====");
+            Console.ResetColor();
 
             int jumlahPart, hargaPart, totalAwal;
             double diskon, biayaLayanan;
@@ -127,8 +131,9 @@ namespace all_latihan
 
         public static void L4A()
         {
-            Console.WriteLine("Latihan 4 Week 2A");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 4 Week 2A =====");
+            Console.ResetColor();
 
             int hargaTiket, jumlahDarat, jumlahAir, totalDarat, totalAir;
             double diskonAir, diskonDarat, subtotal;
@@ -150,8 +155,9 @@ namespace all_latihan
 
         public static void L5A()
         {
-            Console.WriteLine("Latihan 5 Week 2A");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 5 Week 2A =====");
+            Console.ResetColor();
 
             double kelilingSegitiga, luasSegtiga, inputAlas, inputTinggi, inputKeliling;
 
@@ -171,8 +177,9 @@ namespace all_latihan
 
         public static void L6A()
         {
-            Console.WriteLine("Latihan 6 Week 2A");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 6 Week 2A =====");
+            Console.ResetColor();
 
             double s, cashback, p, saldoSisa, totalAwal;
 
@@ -190,8 +197,9 @@ namespace all_latihan
 
         public static void L7A()
         {
-            Console.WriteLine("Latihan 7 Week 2A");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 7 Week 2A =====");
+            Console.ResetColor();
 
             double NA, ExerciseUTS, QTS, UTS, ExerciseUAS, QAS, UAS;
 
@@ -214,8 +222,9 @@ namespace all_latihan
 
         public static void L1B()
         {
-            Console.WriteLine("Latihan 1 Week 2B");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 1 Week 2B =====");
+            Console.ResetColor();
 
             int jumlahProduk, danaTerkumpul;
             int hargaBarang = 300000;
@@ -228,8 +237,9 @@ namespace all_latihan
 
         public static void L2B()
         {
-            Console.WriteLine("Latihan 2 Week 2B");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 2 Week 2B =====");
+            Console.ResetColor();
 
             int iblisLevelAtas = 300000;
             int iblisLevelBawah = 150000;
@@ -247,8 +257,9 @@ namespace all_latihan
 
         public static void L3B()
         {
-            Console.WriteLine("Latihan 3 Week 2B");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 3 Week 2B =====");
+            Console.ResetColor();
 
             int hargaAirMinum = 12000;
             int duitAwal, jumlahBotol, kembalian;
@@ -270,8 +281,9 @@ namespace all_latihan
 
         public static void L4B()
         {
-            Console.WriteLine("Latihan 4 Week 2B");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 4 Week 2B =====");
+            Console.ResetColor();
 
             double hargaPizza = 150000;
             double inputPizza, totalAnggota, patungan, totalPizza;
@@ -288,8 +300,9 @@ namespace all_latihan
 
         public static void L5B()
         {
-            Console.WriteLine("Latihan 5 Week 2B");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 5 Week 2B =====");
+            Console.ResetColor();
 
             int hargaRamen;
             double diskon, total, duit, diskonan;

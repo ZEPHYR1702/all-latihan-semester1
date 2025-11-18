@@ -289,5 +289,15 @@ namespace all_latihan
                 Console.WriteLine("  Perkiraan total laba = " + (totalPenjualan - totalBiaya));
             }
         }
+
+        public static void L3()
+        {
+            Console.WriteLine("Latihan 3 Week 9");
+        }
+
+        public static void L4() 
+        { 
+            Console.WriteLine("Latihan 4 Week 9");
+        }
     }
 }
