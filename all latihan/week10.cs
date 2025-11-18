@@ -11,15 +11,33 @@ namespace all_latihan
     {
         public static void pilihan()
         {
-            L2A();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Week 10 =====");
+            Console.ResetColor();
+
+            Console.Write("Masukan Week (A/B): ");
+            string week = Console.ReadLine().ToLower();
+            if (week == "a")
+            {
+                Console.Write("Masukan Latihan (1/2): ");
+                int latihan = int.Parse(Console.ReadLine());
+                if (latihan == 1)
+                    L1A();
+                else if (latihan == 2)
+                    L2A();
+                else
+                    Console.WriteLine("Latihan tidak ditemukan");
+            }
+            else
+            {
+                Console.WriteLine("coming soon...");
+            }
         }
 
         public static void L1A()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("\n=================================");
-            Console.WriteLine("\tLatihan 1A Week 10");
-            Console.WriteLine("=================================\n");
+            Console.WriteLine("\n===== Latihan 1A Week 10 =====");
             Console.ResetColor();
 
             //deklarasi
@@ -57,9 +75,7 @@ namespace all_latihan
             Console.ResetColor();
             for (int i = 0; i < listLama.Count; i++)
             {
-                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"{listNamaPelanggan[i]} - {listPaket[i]} - {listLama[i]} bulan");
-                Console.ResetColor();
             }
 
             //daftar semua pelanggan yang hanya langganan 1 bulan
@@ -73,16 +89,12 @@ namespace all_latihan
                 if (listLama[i] == 1)
                 {
                     counter1++;
-                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine($"{listNamaPelanggan[i]} - {listPaket[i]} - {listLama[i]} bulan");
-                    Console.ResetColor();
                 }
             }
             if (counter1 == 0)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Tidak ada");
-                Console.ResetColor();
             }
 
             //daftar semua yang langganan paket premium
@@ -96,16 +108,12 @@ namespace all_latihan
                 if (listPaket[i].ToLower() == "premium")
                 {
                     counter2++;
-                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine($"{listNamaPelanggan[i]} - {listPaket[i]} - {listLama[i]} bulan");
-                    Console.ResetColor();
                 }
             }
             if (counter2 == 0)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Tidak ada");
-                Console.ResetColor();
             }
 
             //daftar pendapatan
@@ -140,15 +148,18 @@ namespace all_latihan
                     biaya = 186000 * (listLama[i] - (listLama[i] / 12));
                     totalPremium += biaya;
                 }
-                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"{listNamaPelanggan[i]} - {listPaket[i]} - {listLama[i]} bulan - Rp{biaya}");
-                Console.ResetColor();
 
                 total = total + biaya;
             }
 
             //laporan pendapatan dari masing-masing paket
-            Console.WriteLine($"\nPendapatan dari paket Ponsel\t: Rp{totalPonsel}");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\nLaporan pendapatan dari masing-masing paket");
+            Console.WriteLine("------------------------------------------");
+            Console.ResetColor();
+
+            Console.WriteLine($"Pendapatan dari paket Ponsel\t: Rp{totalPonsel}");
             Console.WriteLine($"Pendapatan dari paket Basic\t: Rp{totalBasic}");
             Console.WriteLine($"Pendapatan dari paket Standar\t: Rp{totalStandar}");
             Console.WriteLine($"Pendapatan dari paket Premium\t: Rp{totalPremium}");
@@ -157,6 +168,10 @@ namespace all_latihan
 
         public static void L2A()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 2A Week 10 =====");
+            Console.ResetColor();
+
             string nomorMobil;
             int lamaParkir;
             char jawab;
@@ -182,7 +197,10 @@ namespace all_latihan
             while (jawab == 'y');
 
             //daftar semua mobil yang parkir
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\nDaftar semua mobil yang parkir");
+            Console.WriteLine("------------------------------");
+            Console.ResetColor();
 
             int totalPendapatan = 0;
 
@@ -215,7 +233,11 @@ namespace all_latihan
             Console.WriteLine();
 
             //Data semua mobil yang parkir minimal 1 hari
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Data semua mobil yang parkir minimal 1 hari");
+            Console.WriteLine("------------------------------------------------");
+            Console.ResetColor();
+
             for (int i = 0; i < listLamaParkir.Count; i++)
             {
                 if (listLamaParkir[i] >= 24)

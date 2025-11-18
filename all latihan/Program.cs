@@ -13,7 +13,7 @@ namespace all_latihan
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("=====(ALL LATIHAN ALPRO)=====\n");
+            Console.WriteLine("===== ALL LATIHAN ALPRO =====\n");
             Console.ResetColor();
 
             Console.Write("Week Berapa(1-14): ");
