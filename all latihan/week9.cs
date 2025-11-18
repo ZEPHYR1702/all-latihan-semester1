@@ -10,13 +10,19 @@ namespace all_latihan
     {
         public static void pilihan()
         {
-            Console.WriteLine("Latihan Week 9.");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan Week 9 =====");
+            Console.ResetColor();
+
             Console.Write("Latihan berapa: ");
             int latihan = int.Parse(Console.ReadLine());
             switch (latihan)
             {
                 case 1:
                     L1();
+                    break;
+                case 2:
+                    L2();
                     break;
                 default:
                     Console.WriteLine("Latihan tidak tersedia.");
@@ -134,8 +140,9 @@ namespace all_latihan
 
         public static void L2()
         {
-            Console.WriteLine("Latihan 2 Week 9");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 2 Week 9 =====");
+            Console.ResetColor();
 
             Console.Write("Banyaknya baris = ");
             int baris = int.Parse(Console.ReadLine());
@@ -167,8 +174,9 @@ namespace all_latihan
                 sawah[noBaris - 1, noKolom - 1] = tanaman;
             }
 
-            Console.WriteLine("\nDaftar tanaman di sawah");
-            Console.WriteLine("=======================");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Daftar tanaman di sawah =====");
+            Console.ResetColor();
             for (int i = 0; i < baris; i++)
             {
                 for (int j = 0; j < kolom; j++)
@@ -183,8 +191,11 @@ namespace all_latihan
             int[] daftarBiaya = new int[] { 100_000, 300_000, 150_000, 500_000 };
             int[] daftarHargJual = new int[] { 120_000, 450_000, 200_000, 800_000 };
             int totalBiaya = 0, totalPenjualan = 0;
-            Console.WriteLine("\nLaporan keuangan");
-            Console.WriteLine("================");
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Laporan keuangan =====");
+            Console.ResetColor();
+
             for (int i = 0; i < baris; i++)
             {
                 for (int j = 0; j < kolom; j++)
@@ -203,8 +214,10 @@ namespace all_latihan
             Console.WriteLine("Perkiraan total hasil penjualan = " + totalPenjualan);
             Console.WriteLine("Perkiraan total laba = " + (totalPenjualan - totalBiaya));
 
-            Console.WriteLine("\nLaporan keuangan per jenis tanaman");
-            Console.WriteLine("==================================");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Laporan keuangan per jenis tanaman =====");
+            Console.ResetColor();
+
             for (int k = 0; k < jenistanaman.Length; k++)
             {
                 totalBiaya = 0;
@@ -226,8 +239,10 @@ namespace all_latihan
                 Console.WriteLine("  Perkiraan total laba = " + (totalPenjualan - totalBiaya));
             }
 
-            Console.WriteLine("\nLaporan keuangan per baris");
-            Console.WriteLine("==========================");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Laporan keuangan per baris =====");
+            Console.ResetColor();
+            
             for (int i = 0; i < baris; i++)
             {
                 totalBiaya = 0;
@@ -249,8 +264,10 @@ namespace all_latihan
                 Console.WriteLine("  Perkiraan total laba = " + (totalPenjualan - totalBiaya));
             }
 
-            Console.WriteLine("\nLaporan keuangan per kolom");
-            Console.WriteLine("==========================");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Laporan keuangan per kolom =====");
+            Console.ResetColor();
+            
             for (int i = 0; i < kolom; i++)
             {
                 totalBiaya = 0;
