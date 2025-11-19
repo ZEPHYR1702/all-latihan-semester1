@@ -5,7 +5,10 @@ public class week8
 	public static void pilihan()
 	{
 		int pilihan;
-		Console.WriteLine("Latihan Week 8");
+		Console.ForegroundColor = ConsoleColor.Green;
+		Console.WriteLine("===== Latihan Week 8 =====");
+		Console.ResetColor();
+
         Console.Write("Latihan Berapa(1-7): ");
 		pilihan = int.Parse(Console.ReadLine());
 		switch (pilihan)
@@ -39,8 +42,9 @@ public class week8
 
 	public static void L1()
 	{
-        Console.WriteLine("Latihan 1 Week 8");
-		Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Green;
+		Console.WriteLine("\n===== Latihan 1 Week 8 =====");
+		Console.ResetColor();
 
 		Console.WriteLine("Masukan data penjualan dalam satu minggu:");
 		int[] penjualan = new int[7];
@@ -66,8 +70,9 @@ public class week8
 
 	public static void L2()
 	{
-		Console.WriteLine("Latihan 2 Week 8");
-		Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("\n===== Latihan 2 Week 8 =====");
+		Console.ResetColor();
 
 		Console.WriteLine("Masukan data penjualan dalam satu minggu:");
 		int[] penjualan = new int[7];
@@ -110,8 +115,9 @@ public class week8
 
 	public static void L3()
 	{
-		Console.WriteLine("Latihan 3 Week 8");
-		Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("\n===== Latihan 3 Week 8 =====");
+		Console.ResetColor();
 
 		Console.WriteLine("Masukan data penjualan dalam satu minggu:");
 		int[] hari = new int[7];
@@ -138,8 +144,9 @@ public class week8
 
 	public static void L4()
 	{
-		Console.WriteLine("Latihan 4 Week 8");
-		Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("\n===== Latihan 4 Week 8 =====");
+		Console.ResetColor();
 
 		Console.WriteLine("Masukan data penjualan dalam satu minggu:");
 		int[] penjualan = new int[14];
@@ -162,8 +169,9 @@ public class week8
 
 	public static void L5()
 	{
-		Console.WriteLine("Latihan 5 Week 8");
-		Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("\n===== Latihan 5 Week 8 =====");
+		Console.ResetColor();
 
 		Console.WriteLine("Masukan data suhu tubuh siswa dalam derajat Celsius:");
 		int[] suhu = new int[10];
@@ -190,8 +198,9 @@ public class week8
 
 	public static void L6()
 	{
-		Console.WriteLine("Latihan 6 Week 8");
-		Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("\n===== Latihan 6 Week 8 =====");
+		Console.ResetColor();
 
 		Console.Write("Masukan jumlah mata kuliah: ");
 		int jumlah = int.Parse(Console.ReadLine());
@@ -239,8 +248,9 @@ public class week8
 
 	public static void L7()
 	{
-		Console.WriteLine("Latihan 7 Week 8");
-		Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("\n===== Latihan 7 Week 8 =====");
+		Console.ResetColor();
 
 		int[] NRP = new int[30];
 		int[] NTS = new int[30];

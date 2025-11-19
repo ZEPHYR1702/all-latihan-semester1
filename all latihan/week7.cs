@@ -10,7 +10,10 @@ namespace all_latihan
     {
         public static void pilihan()
         {
-            Console.WriteLine("Latihan Week 7");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan Week 7 =====");
+            Console.ResetColor();
+
             Console.Write("Latihan Berapa(1-18): ");
             int pilihan = int.Parse(Console.ReadLine());
             switch (pilihan)
@@ -77,8 +80,9 @@ namespace all_latihan
 
         public static void L1()
         {
-            Console.WriteLine("Latihan 1 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 1 Week 7 =====");
+            Console.ResetColor();
 
             Console.Write("Inputkan batas bilangan: ");
             int batas = int.Parse(Console.ReadLine());
@@ -95,8 +99,9 @@ namespace all_latihan
 
         public static void L2()
         {
-            Console.WriteLine("Latihan 2 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 2 Week 7 =====");
+            Console.ResetColor();
 
             Console.Write("Input batas akhir: ");
             int batasAkhir = int.Parse(Console.ReadLine());
@@ -116,8 +121,9 @@ namespace all_latihan
 
         public static void L3()
         {
-            Console.WriteLine("Latihan 3 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 3 Week 7 =====");
+            Console.ResetColor();
 
             Console.Write("Input jumlah baris : ");
             int n = int.Parse(Console.ReadLine());
@@ -134,8 +140,9 @@ namespace all_latihan
 
         public static void L4()
         {
-            Console.WriteLine("Latihan 4 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 4 Week 7 =====");
+            Console.ResetColor();
 
             Console.Write("Jenis barang : ");
             int jenis = int.Parse(Console.ReadLine());
@@ -163,8 +170,9 @@ namespace all_latihan
 
         public static void L5()
         {
-            Console.WriteLine("Latihan 5 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 5 Week 7 =====");
+            Console.ResetColor();
 
             Console.Write("Input bilangan : ");
             int n = int.Parse(Console.ReadLine());
@@ -181,8 +189,9 @@ namespace all_latihan
 
         public static void L6()
         {
-            Console.WriteLine("Latihan 6 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 6 Week 7 =====");
+            Console.ResetColor();
 
             Console.Write("Input bilangan : ");
             int n = int.Parse(Console.ReadLine());
@@ -199,8 +208,9 @@ namespace all_latihan
 
         public static void L7()
         {
-            Console.WriteLine("Latihan 7 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 7 Week 7 =====");
+            Console.ResetColor();
 
             Console.Write("Input bilangan : ");
             int n = int.Parse(Console.ReadLine());
@@ -215,8 +225,9 @@ namespace all_latihan
 
         public static void L8()
         {
-            Console.WriteLine("Latihan 8 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 8 Week 7 =====");
+            Console.ResetColor();
 
             Console.Write("Inputkan jumlah tahun : ");
             int n = int.Parse(Console.ReadLine());
@@ -240,8 +251,9 @@ namespace all_latihan
 
         public static void L9()
         {
-            Console.WriteLine("Latihan 9 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 9 Week 7 =====");
+            Console.ResetColor();
 
             Console.Write("Baris tengah : ");
             int n = int.Parse(Console.ReadLine());
@@ -263,8 +275,9 @@ namespace all_latihan
 
         public static void L10()
         {
-            Console.WriteLine("Latihan 10 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 10 Week 7 =====");
+            Console.ResetColor();
 
             Console.Write("Input jumlah mahasiswa : ");
             int mhs = int.Parse(Console.ReadLine());
@@ -301,8 +314,9 @@ namespace all_latihan
 
         public static void L11()
         {
-            Console.WriteLine("Latihan 11 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 11 Week 7 =====");
+            Console.ResetColor();
 
             int totalSks = 0;
             double totalBobot = 0;
@@ -352,8 +366,9 @@ namespace all_latihan
 
         public static void L12()
         {
-            Console.WriteLine("Latihan 12 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 12 Week 7 =====");
+            Console.ResetColor();
 
             Console.Write("Nilai awal : ");
             int awal = int.Parse(Console.ReadLine());
@@ -388,8 +403,9 @@ namespace all_latihan
 
         public static void L13()
         {
-            Console.WriteLine("Latihan 13 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 13 Week 7 =====");
+            Console.ResetColor();
 
             Console.Write("Input batas awal : ");
             int awal = int.Parse(Console.ReadLine());
@@ -430,8 +446,9 @@ namespace all_latihan
 
         public static void L14()
         {
-            Console.WriteLine("Latihan 14 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 14 Week 7 =====");
+            Console.ResetColor();
 
             Console.Write("Bilangan baris tengah : ");
             int n = int.Parse(Console.ReadLine());
@@ -457,8 +474,9 @@ namespace all_latihan
 
         public static void L15()
         {
-            Console.WriteLine("Latihan 15 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 15 Week 7 =====");
+            Console.ResetColor();
 
             Console.Write("Bilangan penentu : ");
             int n = int.Parse(Console.ReadLine());
@@ -490,8 +508,9 @@ namespace all_latihan
 
         public static void L16()
         {
-            Console.WriteLine("Latihan 16 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 16 Week 7 =====");
+            Console.ResetColor();
 
             Console.Write("Bilangan penentu : ");
             int n = int.Parse(Console.ReadLine());
@@ -524,8 +543,9 @@ namespace all_latihan
 
         public static void L17()
         {
-            Console.WriteLine("Latihan 17 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 17 Week 7 =====");
+            Console.ResetColor();
 
             Console.Write("Bilangan 1 : ");
             int a = int.Parse(Console.ReadLine());
@@ -562,8 +582,9 @@ namespace all_latihan
 
         public static void L18()
         {
-            Console.WriteLine("Latihan 18 Week 7");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 18 Week 7 =====");
+            Console.ResetColor();
 
             int total = 0;
             for (int i = 0; i <= 9; ++i)

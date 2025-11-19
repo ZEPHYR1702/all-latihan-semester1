@@ -32,8 +32,9 @@ namespace all_latihan
 
         public static void L1()
         {
-            Console.WriteLine("Latihan 1 Week 9");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 1 Week 9 =====");
+            Console.ResetColor();
 
             //input user
             Console.Write("Banyaknya lantai: ");
