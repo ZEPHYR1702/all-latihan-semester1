@@ -300,17 +300,19 @@ namespace all_latihan
             Console.ResetColor();
 
             Console.WriteLine("Semua transaksi");
-            Console.WriteLine($"Tanggal \t Jenis \t Nominal \t Uraian");
+            Console.WriteLine($"Tanggal \t Jenis \t Nominal \t Keterangan");
             for (int i = 0; i < listTanggalTransaksi.Count; i++)
             {
                 Console.WriteLine($"{listTanggalTransaksi[i]} \t\t {listJenisTransaksi[i]} \t Rp{listNominal[i]} \t {listUraian[i]}");
             }
 
             //daftar semua transaksi masuk
-            Console.WriteLine("\nTransaksi Masuk");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"\n----- Laporan semua transaksi masuk -----");
+            Console.ResetColor();
 
             int totalMasuk = 0;
-            Console.WriteLine($"Tanggal \t Nominal \t Uraian");
+            Console.WriteLine($"Tanggal \t Nominal \t Keterangan");
             for (int i = 0; i < listJenisTransaksi.Count; i++)
             {
                 if (listJenisTransaksi[i] == 'M')
@@ -322,10 +324,12 @@ namespace all_latihan
             Console.WriteLine($"Total transaksi masuk: Rp{totalMasuk}");
 
             //daftar semua transaksi keluar
-            Console.WriteLine("\nTransaksi Keluar");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"\n----- Laporan semua transaksi keluar -----");
+            Console.ResetColor();
 
             int totalKeluar = 0;
-            Console.WriteLine($"Tanggal \t Nominal \t Uraian");
+            Console.WriteLine($"Tanggal \t Nominal \t Keterangan");
             for (int i = 0; i < listJenisTransaksi.Count; i++)
             {
                 if (listJenisTransaksi[i] == 'K')
@@ -346,6 +350,124 @@ namespace all_latihan
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\n===== Latihan 2B Week 10 =====");
             Console.ResetColor();
+
+            //deklarasi
+            string namaPelayan, Stand;
+            int totalPembelanjaan;
+            char jawab;
+
+            List<string> listNamaPelayan = new List<string>();
+            List<string> listStand = new List<string>();
+            List<int> listTotalPembelanjaan = new List<int>();
+
+            do
+            {
+                Console.Write("Nama Pelayan: ");
+                namaPelayan = Console.ReadLine()!;
+                Console.Write("Stand yang dilayani(SM/SE): ");
+                Stand = Console.ReadLine()!;
+                Console.Write("Total pembelanjaan: ");
+                int.TryParse(Console.ReadLine(), out totalPembelanjaan);
+
+                listNamaPelayan.Add(namaPelayan);
+                listStand.Add(Stand);
+                listTotalPembelanjaan.Add(totalPembelanjaan);
+
+                Console.Write("Ada pelayan lagi (y/t): ");
+                jawab = char.Parse(Console.ReadLine()!.ToLower());
+            }
+            while (jawab == 'y');
+
+            //daftar semua pelayan
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n----- Daftar semua pelayan -----");
+            Console.ResetColor();
+
+            int totalPendapatan = 0;
+            Console.WriteLine("No\tStand\tPelayan\tTotal Pembelanjaan");
+            Console.WriteLine("----------------------------------------");
+            for (int i = 0; i < listNamaPelayan.Count; i++)
+            {
+                Console.WriteLine($"{i+1}\t{listNamaPelayan[i]}\t{listStand[i]}\tRp{listTotalPembelanjaan[i]}");
+                totalPendapatan += listTotalPembelanjaan[i];
+            }
+            Console.WriteLine("----------------------------------------");
+            Console.WriteLine($"\nTotal pendapatan seluruh stand: Rp{totalPendapatan}");
+
+            //transaksi stand super murah
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n----- Transaksi Stand Super Murah -----\n");
+            Console.ResetColor();
+
+            int counter1 = 0;
+            Console.WriteLine("No\tPelayan\t\tTotal Pembelanjaan");
+            Console.WriteLine("-----------------------------------------------");
+            for (int i = 0; i < listStand.Count; i++)
+            {
+                if (listStand[i].ToLower() == "sm")
+                {
+                    counter1 += 1;
+                    Console.WriteLine($"{counter1}\t{listNamaPelayan[i]}\t\tRp{listTotalPembelanjaan[i]}");
+                }
+            }
+
+            //transaksi stand super enak
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n----- Transaksi Stand Super Enak -----\n");
+            Console.ResetColor();
+
+            int counter2 = 0;
+            Console.WriteLine("No\tPelayan\t\tTotal Pembelanjaan");
+            Console.WriteLine("-----------------------------------------------");
+            for (int i = 0; i < listStand.Count; i++)
+            {
+                if (listStand[i].ToLower() == "se")
+                {
+                    counter2 += 1;
+                    Console.WriteLine($"{counter2}\t{listNamaPelayan[i]}\t\tRp{listTotalPembelanjaan[i]}");
+                }
+            }
+
+            //pendapatan anita (30% cut)
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n----- Pendapatan Untuk Anita -----");
+            Console.ResetColor();
+
+            double cut30 = 0;
+            for (int i = 0; i < listTotalPembelanjaan.Count; i++)
+            {
+                cut30 = cut30 + listTotalPembelanjaan[i];
+            }
+            Console.WriteLine($"Total pendapatan Anita: {cut30 * 0.3}");
+
+            //kelompok komisi
+            List<string> listPekerja = new List<string>();
+            List<int> listKomisiSM = new List<int>();
+            List<int> listKomisiSE = new List<int>();
+            int j;
+            
+
+            
+            //komisi
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("----- Komisi Pelayan -----");
+            Console.ResetColor();
+
+            int counter3 = 0;
+            Console.WriteLine("No\tPelayan\tSuper Enak\tSuperMurah");
+            Console.WriteLine("--------------------------------------------------");
+            for (int i = 0; i < listTotalPembelanjaan.Count; i++)
+            {
+                counter3 += 1;
+                if (listStand[i] == "sm")
+                {
+                    Console.WriteLine($"{counter3}\t{listNamaPelayan[i]}\t{0}\t\t{listTotalPembelanjaan[i] * 0.5}");
+                }
+                else
+                {
+                    Console.WriteLine($"{counter3}\t{listNamaPelayan[i]}\t{listTotalPembelanjaan[i] * 0.5}\t\t{0}");
+                }
+            }
         }
     }
 }
