@@ -4,7 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.Write("a test: ");
+            int.TryParse(Console.ReadLine(), out int test);
+
+            Console.WriteLine($"i give you {test}");
         }
     }
 }
