@@ -445,29 +445,62 @@ namespace all_latihan
             List<int> listKomisiSM = new List<int>();
             List<int> listKomisiSE = new List<int>();
             int j;
-            
+            for (int i = 0; i < listNamaPelayan.Count; i++)
+            {
+                j = 0;
+                bool ketemu = false;
+                while (j < listPekerja.Count && ketemu == false)
+                {
+                    if (listNamaPelayan[i] == listPekerja[j])
+                    {
+                        ketemu = true;
+                        if (listStand[i].ToLower() == "sm")
+                        {
+                            listKomisiSM[j] = listKomisiSM[j] + (int)(listTotalPembelanjaan[i] * 0.5);
+                        }
+                        else
+                        {
+                            listKomisiSE[j] = listKomisiSE[j] + (int)(listTotalPembelanjaan[i] * 0.5);
+                        }
+                    }
+                    j++;
+                }
+                if (ketemu == false)
+                {
+                    listPekerja.Add(listNamaPelayan[i]);
+                    if (listStand[i].ToLower() == "sm")
+                    {
+                        listKomisiSM.Add((int)(listTotalPembelanjaan[i] * 0.5));
+                        listKomisiSE.Add(0);
+                    }
+                    else
+                    {
+                        listKomisiSE.Add((int)(listTotalPembelanjaan[i] * 0.5));
+                        listKomisiSM.Add(0);
+                    }
+                }
+            }
 
             
             //komisi
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("----- Komisi Pelayan -----");
+            Console.WriteLine("\n----- Komisi Pelayan -----");
             Console.ResetColor();
 
             int counter3 = 0;
             Console.WriteLine("No\tPelayan\tSuper Enak\tSuperMurah");
             Console.WriteLine("--------------------------------------------------");
-            for (int i = 0; i < listTotalPembelanjaan.Count; i++)
+            double totalKomisiSM = 0;
+            double totalKomisiSE = 0;
+            for (int i = 0; i < listPekerja.Count; i++)
             {
-                counter3 += 1;
-                if (listStand[i] == "sm")
-                {
-                    Console.WriteLine($"{counter3}\t{listNamaPelayan[i]}\t{0}\t\t{listTotalPembelanjaan[i] * 0.5}");
-                }
-                else
-                {
-                    Console.WriteLine($"{counter3}\t{listNamaPelayan[i]}\t{listTotalPembelanjaan[i] * 0.5}\t\t{0}");
-                }
+                Console.WriteLine($"{i + 1}\t{listPekerja[i]}\tRp{listKomisiSE[i]}\t\tRp{listKomisiSM[i]}");
+                totalKomisiSM += listKomisiSM[i];
+                totalKomisiSE += listKomisiSE[i];
             }
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine($"\nTotal komisi Stand Super Murah: Rp{totalKomisiSM}");
+            Console.WriteLine($"Total komisi Stand Super Enak: Rp{totalKomisiSE}");
         }
     }
 }
