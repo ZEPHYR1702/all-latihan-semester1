@@ -46,7 +46,7 @@
                     //week11.pilihan();
                     break;
                 case 12:
-                    //week12.pilihan();
+                    week12.L2();
                     break;
                 case 13:
                     //week13.pilihan();
