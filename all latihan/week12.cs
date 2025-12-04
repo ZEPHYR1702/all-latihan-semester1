@@ -13,7 +13,9 @@ namespace all_latihan
             Console.WriteLine("\n===== Week 12 =====");
             Console.ResetColor();
 
-            Console.Write("Pilih Latihan (1-3): ");
+            L1B();
+
+            /*Console.Write("Pilih Latihan (1-3): ");
             int.TryParse(Console.ReadLine(), out int pilihan);
             switch (pilihan)
             {
@@ -29,7 +31,7 @@ namespace all_latihan
                 default:
                     Console.WriteLine("Pilihan tidak tersedia");
                     break;
-            }
+            }*/
         }
 
 
@@ -64,7 +66,7 @@ namespace all_latihan
             Console.WriteLine("Terima kasih telah menggunakan layanan kami!");
 
         }
-        
+
         static void TampilkanDaftarFilm(string[] film)
         {
             Console.WriteLine("\nTAMPILKAN FILM YANG SEDANG TAYANG");
@@ -79,13 +81,13 @@ namespace all_latihan
             TampilkanDaftarFilm(film);
             Console.Write("\nPilih nomor film: ");
             int.TryParse(Console.ReadLine(), out int n);
-            return n-1;
+            return n - 1;
         }
 
         static double HargaBerdasarJam(int jam)
         {
             double harga;
-            if(jam < 12)
+            if (jam < 12)
             {
                 harga = 40000;
             }
@@ -159,7 +161,7 @@ namespace all_latihan
                 char.TryParse(Console.ReadLine()!.ToLower(), out jawab);
             }
             while (jawab == 'y');
-            
+
 
 
             Console.WriteLine("\nDaftar Gempa: ");
@@ -223,7 +225,7 @@ namespace all_latihan
                 skor = 2 * skor + 1;
             }
 
-            if(magnitudo >= 5.0)
+            if (magnitudo >= 5.0)
             {
                 skor = skor + (int)((magnitudo - 5) * 10);
             }
@@ -276,7 +278,7 @@ namespace all_latihan
 
         static double HitungHasilPanen(double luasLahan, double hasilDasar, double curahHujan, double suhu)
         {
-            
+
             if (curahHujan >= 800 && curahHujan <= 1200)
             {
                 curahHujan = 1.0;
@@ -321,6 +323,88 @@ namespace all_latihan
 
             double totalPupuk = luasLahan * kesuburanTanah;
             return totalPupuk;
+        }
+
+        //Latihan WEEK12B
+        //SOAL 1
+        public static void L1B()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n===== Latihan 1 Week 12B =====");
+            Console.ResetColor();
+
+            Console.Write("Masukan jumlah data: ");
+            int.TryParse(Console.ReadLine(), out int jumData);
+            int[] arrData = new int[jumData];
+            InputArray(arrData);
+
+            CariMinMax(arrData, out int min, out int max);
+            Console.WriteLine($"Nilai minimum: {min}");
+            Console.WriteLine($"Nilai maximum: {max}");
+
+        }
+
+        static void InputArray(int[] arrData)
+        {
+            for (int i = 0; i < arrData.Length; i++)
+            {
+                Console.Write($"Data ke-{i + 1}: ");
+                int.TryParse(Console.ReadLine(), out arrData[i]);
+            }
+        }
+        
+        static void CariMinMax(int[] arrData, out int min, out int max)
+        {
+            min = arrData[0];
+            max = arrData[0];
+            for (int i = 0; i < arrData.Length; i++)
+            {
+                int n = arrData[i];
+                if (n > max)
+                {
+                    max = n;
+                }
+                else if (n < min)
+                {
+                    min = n;
+                }
+            }
+        }
+
+        //SOAL 2B
+        public static void L2B()
+        {
+            Console.Write("Masukan anggaran perjalanan: ");
+            int.TryParse(Console.ReadLine(), out int anggaranPerjalanan);
+            Console.Write("Jumlah destinasi yang akan dikunjungi: ");
+            int.TryParse(Console.ReadLine(), out int jumDestinasi);
+
+            int total = 0;
+            for (int i = 0; i < jumDestinasi; i++)
+            {
+                Console.Write($"Destinasi #{i + 1}");
+                Console.Write("Nama destinasi: ");
+                string namaDestinasi = Console.ReadLine()!;
+                Console.Write("Jarak (KM): ");
+                double.TryParse(Console.ReadLine(), out double jarak);
+                Console.Write("Biaya (Rp): ");
+                double.TryParse(Console.ReadLine(), out double biaya);
+
+                if (biaya > 200000)
+                {
+                    Console.WriteLine("Biaya destinasi ini cukup tinggi, pertimbangkan efisiensi perjalanan!");
+                }
+            }
+        }
+
+        static void UpdatePerjalanan(ref double totalJarak, ref double totalBiaya, double jarak, double biaya)
+        {
+            totalJarak = biaya + jarak;
+        }
+
+        static void EvaluasiEfisiensi(double totalJarak, double totalBiaya, double anggaran, out double efisiensi, out bool melebihiAnggaran)
+        {
+            efisiensi = totalJarak / (totalBiaya / 1000);
         }
     }
 }
