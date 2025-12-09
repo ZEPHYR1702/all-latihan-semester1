@@ -1,6 +1,6 @@
 ﻿namespace all_latihan
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -50,6 +50,7 @@
                     break;
                 case 13:
                     //week13.pilihan();
+                    Program.Main(args);
                     break;
                 case 14:
                     //week14.pilihan();

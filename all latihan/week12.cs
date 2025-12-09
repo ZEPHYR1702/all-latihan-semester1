@@ -402,9 +402,9 @@ namespace all_latihan
             totalJarak = biaya + jarak;
         }
 
-        static void EvaluasiEfisiensi(double totalJarak, double totalBiaya, double anggaran, out double efisiensi, out bool melebihiAnggaran)
+        /*static void EvaluasiEfisiensi(double totalJarak, double totalBiaya, double anggaran, out double efisiensi, out bool melebihiAnggaran)
         {
             efisiensi = totalJarak / (totalBiaya / 1000);
-        }
+        }*/
     }
 }
